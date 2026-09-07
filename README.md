@@ -15,6 +15,21 @@
 ./powershell/Get-FolderSize.ps1 -Path C:\Users\doral\Downloads
 ```
 
+## 開発フロー
+
+`main` はブランチ保護しているので直接 push できない。作業ブランチ + PR で進める。
+
+```powershell
+cd C:\scripts
+git switch -c feature/なにか
+# ...編集...
+git add -A
+git commit -m "説明"
+git push -u origin feature/なにか
+```
+
+その後 GitHub で PR を作成し、diff を自分で確認して「Merge」する（承認は不要）。
+
 ## メモ
 
 遊びで作ったリポジトリ。気が向いたらスクリプトを足していく。
