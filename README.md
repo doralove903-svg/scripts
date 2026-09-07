@@ -7,6 +7,7 @@
 | スクリプト | 説明 |
 | --- | --- |
 | `powershell/Get-FolderSize.ps1` | 指定フォルダ直下の各項目のサイズを大きい順に表示する |
+| `java/IsFloat/Main.java` | 文字列が浮動小数点数かを状態遷移で判定する練習問題（`isFloat` は未実装） |
 
 ## 使い方
 
