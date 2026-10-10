@@ -1,0 +1,48 @@
+package Phase3.homework;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class Homework2 {
+    public static void main(String[] args) {
+        try (var sc = new Scanner(new File("services_products.txt"))) {
+            var cols = sc.hasNext() ? sc.nextLine().split("\t") : null;
+            if (cols == null) {
+                return;
+            }
+            
+            var total = 0;
+            
+            while (cols != null) {
+            	var middleTotal = 0;
+            	var category = cols[0];
+            	
+            	while (cols != null && cols[0].equals(category)) {
+            		var smallTotal = 0;
+            		var code = cols[1];
+            		
+            		while (cols != null && cols[0].equals(category) && cols[1].equals(code)) {
+            			var name = cols[2];
+            			var price = Integer.parseInt(cols[3]);
+            			            			
+            			smallTotal += price;
+            			System.out.printf("%s\t%s\t%s\t%d\n",category, code, name, price);
+            			cols = sc.hasNext() ? sc.nextLine().split("\t") : null;
+            		}
+            		
+            		System.out.printf("小計\t\t\t%d\n", smallTotal);
+            		middleTotal += smallTotal;
+            		
+            		
+            	}
+            	
+            System.out.printf("中計\t\t\t%d\n", middleTotal);
+            total += middleTotal;
+            }
+            
+            System.out.printf("合計\t\t\t%d\n", total);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
