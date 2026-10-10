@@ -16,7 +16,6 @@ public class Homework1 {
             { 6,  7, -2, -2, -2, -2},
             {-2,  7, -2, -2, -2, -2},
             {-2,  7, -2, -2, -1, -2}
-            // ここも埋めてください
         };
 
         var it = new StringCharacterIterator(s);
@@ -47,7 +46,6 @@ public class Homework1 {
         } else {
         	return 5;
         }
-        // ここも埋めてください
     }
    
     public static void main(String[] args) {
